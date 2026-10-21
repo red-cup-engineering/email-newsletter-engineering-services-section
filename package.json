@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/red-cup-engineering/email-newsletter-engineering-services-section.git"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "exports": {
     ".": "./src/newsletter-issue.mjs",
     "./fiction-serial": "./src/fiction-serial.mjs",
@@ -35,5 +35,9 @@
   "engines": {
     "node": ">=20"
   },
-  "private": false
+  "private": false,
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
+  }
 }

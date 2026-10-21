@@ -1,5 +1,12 @@
 # Newsletter issue production services section
 
+<!-- 561-group-standards:badges:start -->
+[![Red Cup Engineering](https://img.shields.io/badge/561%20Group-Red%20Cup%20Engineering-c0392b)](https://github.com/red-cup-engineering)
+[![License: MIT](https://img.shields.io/badge/license-MIT-c0392b)](LICENSE)
+[![Indigenous data: CARE](https://img.shields.io/badge/Indigenous%20data-CARE-4b6f44)](https://github.com/red-cup-engineering/.github/blob/main/GOVERNANCE.md)
+[![Tips welcome](https://img.shields.io/badge/tips-welcome-d4a017)](https://github.com/561-group/.github/blob/main/TIPS.md)
+<!-- 561-group-standards:badges:end -->
+
 Platform-neutral newsletter-issue fabrication: an issue is
 `{title, dek, sections: [{heading, "body-markdown", sources}], references}`
 — `references` a CSL-JSON pool keyed by citekey, the same frontmatter shape
