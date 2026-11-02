@@ -12,7 +12,7 @@ Platform-neutral newsletter-issue fabrication: an issue is
 — `references` a CSL-JSON pool keyed by citekey, the same frontmatter shape
 `predication-literature-review-long-covid-mechanisms.md` uses. A validated
 issue renders to three targets: clean Markdown, paste-ready HTML, and an
-RSS/Atom item fragment. Built to arm any house newsletter product (the
+RSS/Atom item fragment. Built to arm any Group newsletter product (the
 koios-intelligence-briefing precedent named the shape); it composes
 carriers into an issue, it does not own or schedule any one property's
 delivery.
@@ -35,7 +35,7 @@ delivery.
 
 ## Why the paste-ready renderer is hand-rolled, not the registry's
 
-jsnode search turned up a published, registry-pinned house Markdown
+jsnode search turned up a published, registry-pinned Group Markdown
 family — `@red-cup-engineering/render-markdown-block-html-service` (0.1.2)
 over `render-markdown-inline-html-service` (0.1.2), plus
 `render-markdown-inline-html-nodes-service` and
@@ -59,12 +59,12 @@ The one dependency taken is
 `@red-cup-engineering/read-markdown-frontmatter-service` (0.1.4,
 registry-pinned), reused in `extract-issue-sources.mjs` for the YAML
 frontmatter parse — a different job (structured-data extraction, not
-Markdown-to-HTML rendering) the house package already owns outright.
+Markdown-to-HTML rendering) the Group package already owns outright.
 
-## Feed-item delegation checked against the house writer, not applied
+## Feed-item delegation checked against the Group writer, not applied
 
 `@red-cup-engineering/project-web-feed-artifacts-service` (0.1.0, published
-on the canonical registry) is the house feed writer, and `renderFeedItem`
+on the canonical registry) is the Group feed writer, and `renderFeedItem`
 above was checked against it for duplication before this README was
 written. Its exports (`serializeRssFeed`, `serializeAtomFeed`,
 `jsonFeedObject`, `serializeJsonFeed`, `projectWebFeedArtifacts`) all take
@@ -78,7 +78,7 @@ Synthesizing a throwaway one-item `channel` just to call the whole-feed
 functions and then string-extracting the inner `<item>`/`<entry>` back
 out would trade a small, tested hand-roll for a fragile regex peel of a
 generated document — worse code, not delegation. Real delegation needs a
-fragment-level export added to the house package itself, its evident
+fragment-level export added to the Group package itself, its evident
 owner; until that exists, this duplication (XML/attribute escaping,
 CDATA wrapping) is a named debt, not a refactor performed here.
 
@@ -86,7 +86,7 @@ CDATA wrapping) is a named debt, not a refactor performed here.
 
 `@red-cup-engineering/fabricate-markdown-jsnode-operation-package-service`
 and `@red-cup-engineering/project-jsnode-operation-package-readme-service`
-are the house's own operation-package fabrication machinery this section
+are the Group's own operation-package fabrication machinery this section
 should ideally have been authored through. Both are source-only
 (`classification: source-with-unassayed-delivery` in the jsnode graph —
 never published), and neither of this section's siblings
