@@ -1,0 +1,41 @@
+{
+  "name": "@red-cup-engineering/email-newsletter-engineering-services-section",
+  "version": "0.1.5-dev.0",
+  "type": "module",
+  "description": "Platform-neutral newsletter-issue fabrication: validates a CSL-JSON-cited issue and renders it to clean Markdown, paste-ready HTML (Substack-paste-safe: h2/h3/p/blockquote/a/strong/em only), and an RSS/Atom item fragment.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/red-cup-engineering/email-newsletter-engineering-services-section.git"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": "./src/newsletter-issue.mjs",
+    "./fiction-serial": "./src/fiction-serial.mjs",
+    "./scripts/compose-issue.mjs": "./scripts/compose-issue.mjs",
+    "./scripts/extract-issue-sources.mjs": "./scripts/extract-issue-sources.mjs"
+  },
+  "bin": {
+    "newsletter-issue-production-cli": "apps/newsletter-issue-production-cli.mjs"
+  },
+  "files": [
+    "src/",
+    "scripts/",
+    "apps/"
+  ],
+  "scripts": {
+    "check": "node --check src/newsletter-issue.mjs && node --check src/fiction-serial.mjs && node --check scripts/compose-issue.mjs && node --check scripts/extract-issue-sources.mjs && node --check apps/newsletter-issue-production-cli.mjs",
+    "verify": "npm run check"
+  },
+  "dependencies": {
+    "@red-cup-engineering/markdown-engineering-services-section": "^0.5.9",
+    "@red-cup-engineering/signcell": "^0.18.0 || 0.18.1-dev.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "private": false,
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
+  }
+}
